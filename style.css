@@ -1,0 +1,176 @@
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	background-color: #273336;
+	width: 90vw;
+}
+
+.bold { font-weight: bold; }
+
+header {
+	background-color: #25616E;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: 10vh;
+	box-shadow: 1px 1px 10px #0f0f0f;
+	margin-bottom: 3em;
+}
+
+h1 {
+	font-family: "Cinzel",serif;
+}
+
+h2 {
+	font-family: "Abril Fatface", cursive;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	margin-top: 1em;
+}
+h2 {
+	margin-top: 0;
+	font-size: 28px;
+}
+.infoslot h3 {
+	margin-top: 0;
+	font-size: 18px;
+}
+
+.linksmenu {
+	margin-bottom: 3em;
+}
+
+a {
+	color: black;
+  text-align: center;
+	text-decoration: none;
+	background: #25616E;
+	padding: 0.5em 5em;
+	border-radius: 4px;
+  width: 150px;
+	margin: 2em 1em 3em 0;
+}
+
+section {
+		height: 100%;
+		width: 84vw;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}
+
+/***************************************/
+/***          MUSICSHARE             ***/
+/***************************************/
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 2em 2em 0;
+	background-color: #D2E5ED;
+	border: 2px solid #5F909C;
+	border-collapse: collapse;
+	border-radius: 3px;
+	box-shadow: 1px 1px 10px black;
+	border-radius: : 10px;
+	width: 600px;
+}
+
+	.row {
+		width: 80%;
+	}
+
+	.mediaform {
+		padding: 3em 0 3em 7em;
+	}
+		.mediaform h2 {
+			margin-bottom: 1em;
+			margin-left: -3.5em;
+		}
+	label button {
+			margin: 0 8em 0 0;
+	}
+	textarea {
+		width: 400px;
+	}
+	.starfields {
+		color: grey;
+	}
+
+	.author {
+		display: flex;
+		justify-content: center;
+		margin: 0 0 2em 0;
+		width: 600px;
+		height: 25px;
+		font-weight: bold;
+		font-style: italic;
+		border-bottom: 1px solid #5F909C;
+	}
+		.author p {
+			margin-top: -0.2em;
+			margin-left: -20px;
+		}
+		.author img {
+			margin: 0 0.5em 0 0.5em;
+			position: relative;
+			top: -10px;
+			left: -150%;
+		}
+
+	.mediainfos {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+		.infoslot {
+			margin: 0.5em 0;
+			padding: 0 2em;
+			width: 400px;
+			text-align: center;
+		}
+		.infoslot:nth-child(1) {
+			border-bottom: 1px solid #006064;
+		}
+
+	iframe {
+		margin : 1em 0 1em 0;
+		padding-bottom: 3em;
+		border-bottom: 1px solid #006064;
+	}
+
+	.marking {
+		align-self: flex-end;
+		margin: 2em 2em 2em 0;
+	}
+		button[type=submit] {
+			margin: 1em 0 0 0;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+			button {
+				position: relative;
+				left: 70px;
+				right: 0;
+			}
+			form p {
+				margin-bottom: 0;
+			}
+			label span {
+				color: black;
+			}

@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 if ( isset($_POST['addmark']) && $_POST['addmark']=='Send' && isset($_POST['bandid']) ) {
   $id = $_POST['bandid'];
-  $mysqli = new mysqli("musiqueadepeter.mysql.db", "musiqueadepeter", "M1ndBl457", "musiqueadepeter");
+  $mysqli = new mysqli("host", "user", "pswd", "db");
 
   $reqcompare = 'SELECT agathecheck,pierrecheck FROM bands WHERE id='.$id.'';
   $req = $mysqli->query($reqcompare) or die('Erreur SQL ! '.$sql.'<br />'.$mysqli->error);

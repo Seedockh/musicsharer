@@ -19,7 +19,7 @@ if (isset ($_POST['action']) && $_POST['action']=='Send') {
 	// si tout est bon, on peut commencer l'insertion dans la base
 	  else {
 		// on se connecte à notre base de données
-      $mysqli = new mysqli("musiqueadepeter.mysql.db", "musiqueadepeter", "M1ndBl457", "musiqueadepeter");
+      $mysqli = new mysqli("host", "user", "pswd", "db");
 //$mysqli = new mysqli("localhost","root","","musiqueadepeter");
 
       if($_POST['author']==="Agathe") { $agathecheck = 1; $pierrecheck = 0; }

@@ -33,7 +33,7 @@
 
 
 
-  $mysqli = new mysqli("musiqueadepeter.mysql.db", "musiqueadepeter", "M1ndBl457", "musiqueadepeter");
+  $mysqli = new mysqli("host", "user", "pswd", "db");
   $sql2 = 'SELECT id,bandname,agathecheck,pierrecheck FROM bands ORDER BY id DESC';
   $req2 = $mysqli->query($sql2) or die('Erreur SQL !<br />'.$sql2.'<br />'.$mysqli->error);
   ?>

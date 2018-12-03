@@ -24,13 +24,26 @@ if (isset ($_POST['action']) && $_POST['action']=='Send') {
 
       if($_POST['author']==="Agathe") { $agathecheck = 1; $pierrecheck = 0; }
       else { $agathecheck = 0; $pierrecheck = 1; }
+
+			$url = $mysqli->escape_string($_POST['url']);
+			if (preg_match('/(v=)([0-9]|[A-Z]|[a-z]|\-|\_)*/',$url,$matches)) {
+				$formaturl = "https://www.youtube.com/embed/".substr($matches[0],2);
+			} else {
+				echo 'Wrong URL. Make sure there is a "v=" followed by the video ID in it.';
+				echo '<a href="/musicshare/index.php">Go back</a>';
+				die;
+			}
+			//ex :
+			//https://www.youtube.com/watch?v=0KQDUJSTFBQ&list=PLArAJlC1y558bUIr6Aia7Rf5zEym6Icu-
+
+
   		// préparation de la requête d'insertion (table forum_reponses)
   		$sql = 'INSERT INTO bands(author,bandname,albumname,releasedate,url,comment,agathecheck,pierrecheck) VALUES(
         "'.$mysqli->escape_string($_POST['author']).'",
         "'.$mysqli->escape_string($_POST['bandname']).'",
         "'.$mysqli->escape_string($_POST['medianame']).'",
         "'.$mysqli->escape_string($_POST['releasedate']).'",
-        "'.$mysqli->escape_string($_POST['url']).'",
+        "'.$formaturl.'",
         "'.$mysqli->escape_string($_POST['comment']).'",
         "'.$agathecheck.'",
         "'.$pierrecheck.'"

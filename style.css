@@ -7,7 +7,7 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-size: 13px;
 	background-color: #273336;
-	width: 90vw;
+	width: 100vw;
 }
 
 .bold { font-weight: bold; }
@@ -17,10 +17,11 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 90vw;
+	width: 100vw;
 	height: 10vh;
 	box-shadow: 1px 1px 10px #0f0f0f;
 	margin-bottom: 3em;
+	padding-left: 22%;
 }
 
 h1 {
@@ -46,24 +47,104 @@ h2 {
 	font-size: 18px;
 }
 
-.linksmenu {
-	margin-bottom: 3em;
-}
-
 a {
 	color: black;
   text-align: center;
 	text-decoration: none;
-	background: #25616E;
-	padding: 0.5em 5em;
+	background: rgba(37,97,110,0.4);
+		box-shadow: 1px 1px 10px #0f0f0f;
+	padding: 0.5em 2em;
 	border-radius: 4px;
-  width: 150px;
-	margin: 2em 1em 3em 0;
+	font-family: "Cinzel",serif;
+	font-weight: bold;
+}
+
+.container {
+	display: flex;
+	width: 90vw;
+}
+
+.leftCol {
+	padding-top: 2em;
+	width: 20vw;
+	display: flex;
+	flex-direction: column;
+}
+
+	aside {
+		position: fixed;
+	}
+	aside .spotifylog {
+		margin-bottom: 3em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 10px;
+		position: absolute;
+		top: -10em;
+		left: 0;
+	}
+		.spotifylog a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.spotifylog img {
+			margin-right: 1em;
+		}
+
+	aside .bandslist {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+		.bandslist a {
+			margin-bottom: 1em;
+		}
+			.leftlink {
+				display:flex;
+				align-items: center;
+				margin-right: 2em;
+			}
+			.rightlink {
+				width: 20px;
+			}
+				.rightlink i {
+					padding-left: 20px;
+					margin: -1em 0 0 0;
+				}
+
+		.addlink {
+			background: rgba(37,97,110,0.2);
+			color: #D2E5ED;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin-top: 3em;
+			width: 150px;
+			padding: 0.2em 1em 0.2em 0;
+			align-self: center;
+		}
+		.addlink i {
+			margin-right: 0.5em;
+		}
+
+.rightCol {
+	width: 70vw;
+}
+
+footer {
+		background-color: #25616E;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 99vw;
+		height: 15vh;
+		box-shadow: 1px 1px 10px #0f0f0f;
+		margin-top: 3em;
 }
 
 section {
-		height: 100%;
-		width: 84vw;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
@@ -76,15 +157,32 @@ article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 2em 2em 0;
+	margin: 0 0 2em 0;
 	background-color: #D2E5ED;
 	border: 2px solid #5F909C;
 	border-collapse: collapse;
 	border-radius: 3px;
 	box-shadow: 1px 1px 10px black;
 	border-radius: : 10px;
-	width: 600px;
+	width: 480px;
+	position: relative;
 }
+	article a {
+		background: rgba(37,97,110,0);
+		box-shadow: none;
+		margin-top: -1em;
+	}
+		.smalltitle {
+			font-family: 'Lobster', cursive;
+			font-size: 15px;
+			margin-top: 1em;
+		}
+
+	#form {
+		background: rgba(37,97,110,0);
+		box-shadow: none;
+		margin-top: -4em;
+	}
 
 	.row {
 		width: 80%;
@@ -94,8 +192,11 @@ article {
 		padding: 3em 0 3em 7em;
 	}
 		.mediaform h2 {
+			margin-top: 1em;
 			margin-bottom: 1em;
 			margin-left: -3.5em;
+			padding-bottom: 1em;
+
 		}
 	label button {
 			margin: 0 8em 0 0;
@@ -111,7 +212,7 @@ article {
 		display: flex;
 		justify-content: center;
 		margin: 0 0 2em 0;
-		width: 600px;
+		width: 480px;
 		height: 25px;
 		font-weight: bold;
 		font-style: italic;
@@ -125,7 +226,7 @@ article {
 			margin: 0 0.5em 0 0.5em;
 			position: relative;
 			top: -10px;
-			left: -150%;
+			left: -110%;
 		}
 
 	.mediainfos {
@@ -133,7 +234,9 @@ article {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
+		margin-top: 2em;
 	}
+
 		.infoslot {
 			margin: 0.5em 0;
 			padding: 0 2em;
@@ -143,6 +246,10 @@ article {
 		.infoslot:nth-child(1) {
 			border-bottom: 1px solid #006064;
 		}
+		article > .infoslot {
+			margin-bottom: 15em;
+		}
+
 
 	iframe {
 		margin : 1em 0 1em 0;
@@ -153,6 +260,10 @@ article {
 	.marking {
 		align-self: flex-end;
 		margin: 2em 2em 2em 0;
+		position: absolute;
+		bottom: -10px;
+		left: 270px;
+		width: 100%;
 	}
 		button[type=submit] {
 			margin: 1em 0 0 0;
